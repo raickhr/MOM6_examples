@@ -1,1 +1,19 @@
-! Blank file in which we can put "overrides" for parameters
+VARIABLE_WINDS = True           !   [Boolean] default = True
+                                ! If true, the winds vary in time after the initialization.
+WIND_CONFIG = "USER"            ! default = "zero"
+                                ! The character string that indicates how wind forcing is specified.  Valid
+                                ! options include (file), (data_override), (2gyre), (1gyre), (gyres), (zero),
+                                ! (const), (Neverworld), (scurves), (ideal_hurr), (SCM_ideal_hurr),
+                                ! (SCM_CVmix_tests) and (USER).
+
+! === ADDED BY SHIKHAR FOR shikhar.rai@whoi.edu
+UWIND_MAG = 10.0                !   [m/s] default = 10
+                                ! The peak zonal wind when WIND_CONFIG = USER.
+RELATIVE_WINDSTRESS = True      !   default = False
+                                ! The parameter to turn on use of relative wind velocity in calculating wind stress
+CDRAG_WIND = 0.05               !  [nondim] default = 0.05
+                                ! A constant coefficient of drag for wind stress.
+RHO_AIR = 1.293                 !   [kg/m^3] default = 1.293
+                                ! Constant density of air
+
+! === ADDED BY SHIKHAR FOR shikhar.rai@whoi.edu

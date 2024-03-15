@@ -1383,7 +1383,7 @@ PERT_EPBL = False               !   [Boolean] default = False
                                 ! namelist in the UFS model only.
 
 ! === module MOM_surface_forcing ===
-VARIABLE_WINDS = False          !   [Boolean] default = True
+VARIABLE_WINDS = True           !   [Boolean] default = True
                                 ! If true, the winds vary in time after the initialization.
 VARIABLE_BUOYFORCE = False      !   [Boolean] default = True
                                 ! If true, the buoyancy forcing varies in time after the initialization of the
@@ -1397,6 +1397,19 @@ WIND_CONFIG = "zero"            ! default = "zero"
                                 ! options include (file), (data_override), (2gyre), (1gyre), (gyres), (zero),
                                 ! (const), (Neverworld), (scurves), (ideal_hurr), (SCM_ideal_hurr),
                                 ! (SCM_CVmix_tests) and (USER).
+
+! === ADDED BY SHIKHAR FOR shikhar.rai@whoi.edu
+UWIND_MAG = 10.0                !   [m/s] default = 10
+                                ! The peak zonal wind when WIND_CONFIG = USER.
+RELATIVE_WINDSTRESS = False     !   default = False
+                                ! The parameter to turn on use of relative wind velocity in calculating wind stress
+CDRAG_WIND = 0.05               !  [nondim] default = 0.05
+                                ! A constant coefficient of drag for wind stress.
+RHO_AIR = 1.293                 !   [kg/m^3] default = 1.293
+                                ! Constant density of air
+
+! === ADDED BY SHIKHAR FOR shikhar.rai@whoi.edu
+
 RESTOREBUOY = False             !   [Boolean] default = False
                                 ! If true, the buoyancy fluxes drive the model back toward some specified
                                 ! surface state with a rate given by FLUXCONST.
