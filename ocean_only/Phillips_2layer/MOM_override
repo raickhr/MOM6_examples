@@ -2,7 +2,6 @@
 #override DT_THERM = 450
 #override NIGLOBAL = 240
 #override NJGLOBAL = 320
-#override LENLAT = 
 #override THICKNESS_CONFIG = "thickness_file"
 #override VELOCITY_CONFIG = "zero"
 #override SPONGE = False
