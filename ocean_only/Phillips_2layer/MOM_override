@@ -6,11 +6,12 @@
 #override VELOCITY_CONFIG = "zero"
 #override SPONGE = False
 #override VARIABLE_WINDS = True           !   [Boolean] default = True
+                                          ! If true, the winds vary in time after the initialization.
 #override DT_FORCING = 150.0
 #override DAYMAX = 1000
 THICKNESS_FILE = 'MOM_thickness.nc'
 
-                                ! If true, the winds vary in time after the initialization.
+                                
 WIND_CONFIG = "USER"            ! default = "zero"
                                 ! The character string that indicates how wind forcing is specified.  Valid
                                 ! options include (file), (data_override), (2gyre), (1gyre), (gyres), (zero),
