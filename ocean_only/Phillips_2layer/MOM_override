@@ -1,4 +1,16 @@
-VARIABLE_WINDS = True           !   [Boolean] default = True
+#override DT = 150
+#override DT_THERM = 450
+#override NIGLOBAL = 240
+#override NJGLOBAL = 320
+#override LENLAT = 
+#override THICKNESS_CONFIG = "thickness_file"
+#override VELOCITY_CONFIG = "zero"
+#override SPONGE = False
+#override VARIABLE_WINDS = True           !   [Boolean] default = True
+#override DT_FORCING = 150.0
+#override DAYMAX = 1000
+THICKNESS_FILE = 'MOM_thickness.nc'
+
                                 ! If true, the winds vary in time after the initialization.
 WIND_CONFIG = "USER"            ! default = "zero"
                                 ! The character string that indicates how wind forcing is specified.  Valid
@@ -6,14 +18,17 @@ WIND_CONFIG = "USER"            ! default = "zero"
                                 ! (const), (Neverworld), (scurves), (ideal_hurr), (SCM_ideal_hurr),
                                 ! (SCM_CVmix_tests) and (USER).
 
-! === ADDED BY SHIKHAR FOR shikhar.rai@whoi.edu
-UWIND_MAG = 10.0                !   [m/s] default = 10
-                                ! The peak zonal wind when WIND_CONFIG = USER.
-RELATIVE_WINDSTRESS = True      !   default = False
-                                ! The parameter to turn on use of relative wind velocity in calculating wind stress
-CDRAG_WIND = 0.05               !  [nondim] default = 0.05
-                                ! A constant coefficient of drag for wind stress.
-RHO_AIR = 1.293                 !   [kg/m^3] default = 1.293
-                                ! Constant density of air
+! === ADDED BY SHIKHAR FOR RELATIVE WINDS FORCING shikhar.rai@whoi.edu
+WINDS_JETWIDTH  = 200.0          ![k]    
+                                 ! "Winds Jet Width in km"
+UWIND_MAG = 5.0                  !   [m/s] default = 10
+                                 ! The peak zonal wind when WIND_CONFIG = USER.
+RELATIVE_WINDSTRESS = True       !   default = False
+                                 ! The parameter to turn on use of relative wind velocity in calculating wind stress
+CDRAG_WIND = 0.001               !  [nondim] default = 0.05
+                                 ! A constant coefficient of drag for wind stress.
+RHO_AIR = 1.293                  !   [kg/m^3] default = 1.293
+                                 ! Constant density of air
+BACKGROUNDWIND = 0.0             ! [m/s] zonal background winds
 
-! === ADDED BY SHIKHAR FOR shikhar.rai@whoi.edu
+! === ADDED BY SHIKHAR FOR RELATIVE WINDS FORCING shikhar.rai@whoi.edu
